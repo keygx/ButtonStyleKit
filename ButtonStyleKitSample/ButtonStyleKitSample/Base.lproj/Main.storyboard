@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButtonStyleKitSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYS-g6-0nw">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="CZY-2d-FEk"/>
+                                    <constraint firstAttribute="height" constant="30" id="Txv-P8-Ify"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="normal"/>
+                                <connections>
+                                    <action selector="btn1NormalActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntb-Sn-pia"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJ5-OO-op2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="gzz-I8-Tvv"/>
+                                    <constraint firstAttribute="height" constant="30" id="hjR-E8-cp7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="highlighted"/>
+                                <connections>
+                                    <action selector="btn1HighlightedActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Zy-1v-DaH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOW-cC-05x">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5f8-MU-Zdz"/>
+                                    <constraint firstAttribute="width" constant="80" id="vj4-7h-j0o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="disabled"/>
+                                <connections>
+                                    <action selector="btn1DisabledActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lrm-hT-hhN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VF-Og-Iij" customClass="SampleButtonStandardStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EvX-Kp-7ci"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ID-H0-bqe" customClass="SampleButtonCheckboxStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="IMY-c8-K5c"/>
+                                    <constraint firstAttribute="width" constant="120" id="s71-nU-YYf"/>
+                                </constraints>
+                                <state key="normal" title="checkbox">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVD-aq-QtY" customClass="SampleButtonRadioStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="DWg-ST-Y2b"/>
+                                    <constraint firstAttribute="height" constant="36" id="I6m-JA-495"/>
+                                </constraints>
+                                <state key="normal" title="radio A">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fr-zl-F2e" customClass="SampleButtonRadioStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="1Gl-hV-4GY"/>
+                                    <constraint firstAttribute="width" constant="120" id="VAZ-dP-N7R"/>
+                                </constraints>
+                                <state key="normal" title="radio B">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1m-e0-J01" customClass="SampleButtonRadioStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Qfz-L4-L5l"/>
+                                    <constraint firstAttribute="width" constant="120" id="of3-Bo-Vbe"/>
+                                </constraints>
+                                <state key="normal" title="radio C">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dYS-g6-0nw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="1EQ-QK-3IM"/>
+                            <constraint firstItem="eVD-aq-QtY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ch-qa-bhI"/>
+                            <constraint firstItem="1Fr-zl-F2e" firstAttribute="top" secondItem="eVD-aq-QtY" secondAttribute="bottom" constant="10" id="5Sf-bE-lE8"/>
+                            <constraint firstItem="dYS-g6-0nw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-100.5" id="Ew3-lm-8Px"/>
+                            <constraint firstItem="h1m-e0-J01" firstAttribute="top" secondItem="1Fr-zl-F2e" secondAttribute="bottom" constant="10" id="FDU-23-1xG"/>
+                            <constraint firstItem="3ID-H0-bqe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FqA-9A-mrr"/>
+                            <constraint firstItem="oOW-cC-05x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="99.5" id="GFE-Ap-aDB"/>
+                            <constraint firstAttribute="trailing" secondItem="9VF-Og-Iij" secondAttribute="trailing" constant="48" id="Pcy-Si-UIy"/>
+                            <constraint firstItem="CJ5-OO-op2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PdR-Oi-vj1"/>
+                            <constraint firstItem="h1m-e0-J01" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RRd-iX-GnK"/>
+                            <constraint firstItem="9VF-Og-Iij" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="Sg1-iy-x46"/>
+                            <constraint firstItem="oOW-cC-05x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="c8q-QN-uA3"/>
+                            <constraint firstItem="eVD-aq-QtY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="230" id="cKK-ge-1jm"/>
+                            <constraint firstItem="1Fr-zl-F2e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cpZ-wE-soR"/>
+                            <constraint firstItem="9VF-Og-Iij" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="47" id="fgR-Xj-2el"/>
+                            <constraint firstItem="CJ5-OO-op2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ftU-XK-Qms"/>
+                            <constraint firstItem="3ID-H0-bqe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="nMo-Ip-VnW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="9VF-Og-Iij" id="YcL-67-ZXg"/>
+                        <outlet property="checkbox" destination="3ID-H0-bqe" id="nKG-9s-0b6"/>
+                        <outlet property="radioA" destination="eVD-aq-QtY" id="Anc-3o-Ahv"/>
+                        <outlet property="radioB" destination="1Fr-zl-F2e" id="weU-q5-MqA"/>
+                        <outlet property="radioC" destination="h1m-e0-J01" id="a6A-4l-5eo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
