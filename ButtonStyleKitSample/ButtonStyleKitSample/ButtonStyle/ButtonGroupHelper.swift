@@ -29,6 +29,7 @@ struct RadioGroup {
     }
     
     func disabled() {
+        unSelectAll()
         group.forEach {
             $0.currentState = .disabled
         }
