@@ -26,9 +26,9 @@ open class ButtonStyleSelectableBase: ButtonStyleKit {
     override public final var isSelected: Bool {
         set {
             if newValue {
-                currentState = .selected
+                value = true
             } else {
-                currentState = .normal
+                value = false
             }
         }
         get {
