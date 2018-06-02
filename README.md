@@ -3,7 +3,7 @@
 ButtonStyleKit is helper library for UIButton custom styles.
 
 ## Requirements
-- Swift 4.0
+- Swift 4.1
 - iOS 8.0 or later
 
 ## Installation
