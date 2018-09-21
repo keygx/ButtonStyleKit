@@ -24,6 +24,7 @@
 		36DAF3191D37CA530056A56F /* ButtonStyleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DAF3181D37CA530056A56F /* ButtonStyleBuilder.swift */; };
 		36E99BC71D46149A001968D8 /* ButtonStyleSelectableBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E99BC61D46149A001968D8 /* ButtonStyleSelectableBase.swift */; };
 		36E99BC91D461526001968D8 /* ButtonStyleStandardBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E99BC81D461526001968D8 /* ButtonStyleStandardBase.swift */; };
+		A9AC8F8C2154A170002675B9 /* SampleButtonShadowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AC8F8B2154A170002675B9 /* SampleButtonShadowStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		36DAF3181D37CA530056A56F /* ButtonStyleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyleBuilder.swift; sourceTree = "<group>"; };
 		36E99BC61D46149A001968D8 /* ButtonStyleSelectableBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyleSelectableBase.swift; sourceTree = "<group>"; };
 		36E99BC81D461526001968D8 /* ButtonStyleStandardBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyleStandardBase.swift; sourceTree = "<group>"; };
+		A9AC8F8B2154A170002675B9 /* SampleButtonShadowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleButtonShadowStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				367CA85D1D71612100E6ABC3 /* ButtonGroupHelper.swift */,
 				36B537E71D3344520037CA02 /* SampleButtonStandardStyle.swift */,
+				A9AC8F8B2154A170002675B9 /* SampleButtonShadowStyle.swift */,
 				36B8B8011D336316003A8172 /* SampleButtonCheckboxStyle.swift */,
 				36AD60FF1D52609900752599 /* SampleButtonRadioStyle.swift */,
 				36B8B8031D3367EF003A8172 /* images.xcassets */,
@@ -273,6 +276,7 @@
 				36B537E91D3344520037CA02 /* SampleButtonStandardStyle.swift in Sources */,
 				367CA85E1D71612100E6ABC3 /* ButtonGroupHelper.swift in Sources */,
 				36B537C31D33409B0037CA02 /* ViewController.swift in Sources */,
+				A9AC8F8C2154A170002675B9 /* SampleButtonShadowStyle.swift in Sources */,
 				36B8B8021D336316003A8172 /* SampleButtonCheckboxStyle.swift in Sources */,
 				36B537C11D33409B0037CA02 /* AppDelegate.swift in Sources */,
 				36AD61001D52609900752599 /* SampleButtonRadioStyle.swift in Sources */,
