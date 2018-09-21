@@ -25,11 +25,13 @@ open class ButtonStyleBuilder {
     private var borderColor = Data<UIColor>()
     private var cornerRadius = Data<CGFloat>()
     private var opacity = Data<Float>()
+    private var backgroundColor = Data<UIColor>()
     private var tintColor = Data<UIColor>()
     private var shadowColor = Data<UIColor>()
     private var shadowOpacity = Data<Float>()
     private var shadowOffset = Data<CGSize>()
     private var shadowRadius = Data<CGFloat>()
+    private var shadowPath = Data<CGPath>()
     private var clipsToBounds = Data<Bool>()
     private var masksToBounds = Data<Bool>()
     private var isExclusiveTouch = Data<Bool>()
@@ -153,6 +155,11 @@ open class ButtonStyleBuilder {
         return self
     }
     
+    public func setBackgroundColor(_ backgroundColor: UIColor) -> Self {
+        setProperty(param: self.backgroundColor, value: backgroundColor, state: state)
+        return self
+    }
+    
     public func setTintColor(_ tintColor: UIColor) -> Self {
         setProperty(param: self.tintColor, value: tintColor, state: state)
         return self
@@ -175,6 +182,11 @@ open class ButtonStyleBuilder {
     
     public func setShadowRadius(_ shadowRadius: CGFloat) -> Self {
         setProperty(param: self.shadowRadius, value: shadowRadius, state: state)
+        return self
+    }
+    
+    public func setShadowPath(_ shadowPath: CGPath) -> Self {
+        setProperty(param: self.shadowPath, value: shadowPath, state: state)
         return self
     }
     
@@ -278,6 +290,10 @@ open class ButtonStyleBuilder {
             button.layer.opacity = opacity
         }
         
+        if let backgroundColor = attachProperty(param: backgroundColor, state: state) {
+            button.layer.backgroundColor = backgroundColor.cgColor
+        }
+        
         if let tintColor = attachProperty(param: tintColor, state: state) {
             button.tintColor = tintColor
         }
@@ -296,6 +312,10 @@ open class ButtonStyleBuilder {
         
         if let shadowRadius = attachProperty(param: shadowRadius, state: state) {
             button.layer.shadowRadius = shadowRadius
+        }
+        
+        if let shadowPath = attachProperty(param: shadowPath, state: state) {
+            button.layer.shadowPath = shadowPath
         }
         
         if let clipsToBounds = attachProperty(param: clipsToBounds, state: state) {
