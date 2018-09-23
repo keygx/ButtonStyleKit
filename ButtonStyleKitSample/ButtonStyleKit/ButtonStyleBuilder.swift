@@ -35,8 +35,8 @@ open class ButtonStyleBuilder {
     private var clipsToBounds = Data<Bool>()
     private var masksToBounds = Data<Bool>()
     private var isExclusiveTouch = Data<Bool>()
-    private var contentHorizontalAlignment = Data<UIControlContentHorizontalAlignment>()
-    private var contentVerticalAlignment = Data<UIControlContentVerticalAlignment>()
+    private var contentHorizontalAlignment = Data<UIControl.ContentHorizontalAlignment>()
+    private var contentVerticalAlignment = Data<UIControl.ContentVerticalAlignment>()
     private var titleEdgeInsets = Data<UIEdgeInsets>()
     private var contentEdgeInsets = Data<UIEdgeInsets>()
     private var imageEdgeInsets = Data<UIEdgeInsets>()
@@ -205,28 +205,28 @@ open class ButtonStyleBuilder {
         return self
     }
     
-    public func setContentHorizontalAlignment(_ contentHorizontalAlignment: UIControlContentHorizontalAlignment) -> Self {
+    public func setContentHorizontalAlignment(_ contentHorizontalAlignment: UIControl.ContentHorizontalAlignment) -> Self {
         setProperty(param: self.contentHorizontalAlignment, value: contentHorizontalAlignment, state: state)
         return self
     }
     
-    public func setContentVerticalAlignment(_ contentVerticalAlignment: UIControlContentVerticalAlignment) -> Self {
+    public func setContentVerticalAlignment(_ contentVerticalAlignment: UIControl.ContentVerticalAlignment) -> Self {
         setProperty(param: self.contentVerticalAlignment, value: contentVerticalAlignment, state: state)
         return self
     }
     
     public func setTitleEdgeInsets(top: CGFloat, right: CGFloat, bottom: CGFloat, left: CGFloat) -> Self {
-        setProperty(param: self.titleEdgeInsets, value: UIEdgeInsetsMake(top, left, bottom, right), state: state)
+        setProperty(param: self.titleEdgeInsets, value: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right), state: state)
         return self
     }
     
     public func setContentEdgeInsets(top: CGFloat, right: CGFloat, bottom: CGFloat, left: CGFloat) -> Self {
-        setProperty(param: self.contentEdgeInsets, value: UIEdgeInsetsMake(top, left, bottom, right), state: state)
+        setProperty(param: self.contentEdgeInsets, value: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right), state: state)
         return self
     }
     
     public func setImageEdgeInsets(top: CGFloat, right: CGFloat, bottom: CGFloat, left: CGFloat) -> Self {
-        setProperty(param: self.imageEdgeInsets, value: UIEdgeInsetsMake(top, left, bottom, right), state: state)
+        setProperty(param: self.imageEdgeInsets, value: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right), state: state)
         return self
     }
     

@@ -17,18 +17,18 @@ open class ButtonStyleKit: UIButton {
         case selected
         case disabled
         
-        func getState() -> UIControlState? {
+        func getState() -> UIControl.State? {
             switch self {
             case .all:
                 return nil
             case .normal:
-                return UIControlState.normal
+                return UIControl.State.normal
             case .highlighted:
-                return UIControlState.highlighted
+                return UIControl.State.highlighted
             case .selected:
-                return UIControlState.selected
+                return UIControl.State.selected
             case .disabled:
-                return UIControlState.disabled
+                return UIControl.State.disabled
             }
         }
     }
