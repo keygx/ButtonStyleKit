@@ -427,4 +427,15 @@ extension ButtonStyleBuilder {
         
         return imageView
     }
+    
+    public final func createImageView(frame: CGRect, normal: UIImage, highlighted: UIImage?) -> UIImageView {
+        let imageView = UIImageView(frame: frame)
+        imageView.image = normal
+        if let highlighted = highlighted {
+            imageView.highlightedImage = highlighted
+        }
+        imageView.contentMode = .scaleAspectFit
+        
+        return imageView
+    }
 }

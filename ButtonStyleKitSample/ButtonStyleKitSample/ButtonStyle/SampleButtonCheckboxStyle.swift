@@ -33,7 +33,7 @@ final class SampleButtonCheckboxStyle: ButtonStyleSelectableBase {
             .build()
         
         checkImageView = buttonStyle.createImageView(frame: CGRect(x: 0, y: 4, width: 28, height: 28),
-                                                     normal: "checkbox", highlighted: "checkbox_on")
+                                                     normal: UIImage(named: "checkbox")!, highlighted: UIImage(named: "checkbox_on")!)
         addSubview(checkImageView)
         
         buttonStyle.apply()
