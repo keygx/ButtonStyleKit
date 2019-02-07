@@ -17,7 +17,7 @@ private class Data<T> {
 
 open class ButtonStyleBuilder {
     // Basic
-    private var button = ButtonStyleKit()
+    private weak var button: ButtonStyleKit!
     private var state: ButtonStyleKit.ButtonState = .normal
     // Styles
     private var font = Data<UIFont>()
@@ -368,6 +368,7 @@ open class ButtonStyleBuilder {
     }
     
     public func apply() {
+        guard let button = button else { return }
         self.state = button.currentState
         build()
     }
