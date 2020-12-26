@@ -4,7 +4,7 @@ ButtonStyleKit is helper library for UIButton custom styles.
 
 ## Requirements
 - Swift 5
-- iOS 8.0 or later
+- iOS 9.0 or later
 
 ## Installation
 
@@ -13,6 +13,13 @@ ButtonStyleKit is helper library for UIButton custom styles.
 ```Cartfile
 github "keygx/ButtonStyleKit"
 ```
+
+### CocoaPods
+
+```PodFile
+pod 'ButtonStyleKit', :git => 'https://github.com/keygx/ButtonStyleKit'
+```
+
 
 ### Swift versions support
 

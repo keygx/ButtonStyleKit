@@ -8,7 +8,7 @@
 
 import UIKit
 
-private class Data<T> {
+private class Property<T> {
     var normal:      T?
     var highlighted: T?
     var selected:    T?
@@ -20,30 +20,30 @@ open class ButtonStyleBuilder {
     private weak var button: ButtonStyleKit!
     private var state: ButtonStyleKit.ButtonState = .normal
     // Styles
-    private var font = Data<UIFont>()
-    private var borderWidth = Data<CGFloat>()
-    private var borderColor = Data<UIColor>()
-    private var cornerRadius = Data<CGFloat>()
-    private var opacity = Data<Float>()
-    private var backgroundColor = Data<UIColor>()
-    private var tintColor = Data<UIColor>()
-    private var shadowColor = Data<UIColor>()
-    private var shadowOpacity = Data<Float>()
-    private var shadowOffset = Data<CGSize>()
-    private var shadowRadius = Data<CGFloat>()
-    private var shadowPath = Data<CGPath>()
-    private var clipsToBounds = Data<Bool>()
-    private var masksToBounds = Data<Bool>()
-    private var isExclusiveTouch = Data<Bool>()
-    private var contentHorizontalAlignment = Data<UIControl.ContentHorizontalAlignment>()
-    private var contentVerticalAlignment = Data<UIControl.ContentVerticalAlignment>()
-    private var titleEdgeInsets = Data<UIEdgeInsets>()
-    private var contentEdgeInsets = Data<UIEdgeInsets>()
-    private var imageEdgeInsets = Data<UIEdgeInsets>()
-    private var reversesTitleShadowWhenHighlighted = Data<Bool>()
-    private var adjustsImageWhenHighlighted = Data<Bool>()
-    private var adjustsImageWhenDisabled = Data<Bool>()
-    private var showsTouchWhenHighlighted = Data<Bool>()
+    private var font = Property<UIFont>()
+    private var borderWidth = Property<CGFloat>()
+    private var borderColor = Property<UIColor>()
+    private var cornerRadius = Property<CGFloat>()
+    private var opacity = Property<Float>()
+    private var backgroundColor = Property<UIColor>()
+    private var tintColor = Property<UIColor>()
+    private var shadowColor = Property<UIColor>()
+    private var shadowOpacity = Property<Float>()
+    private var shadowOffset = Property<CGSize>()
+    private var shadowRadius = Property<CGFloat>()
+    private var shadowPath = Property<CGPath>()
+    private var clipsToBounds = Property<Bool>()
+    private var masksToBounds = Property<Bool>()
+    private var isExclusiveTouch = Property<Bool>()
+    private var contentHorizontalAlignment = Property<UIControl.ContentHorizontalAlignment>()
+    private var contentVerticalAlignment = Property<UIControl.ContentVerticalAlignment>()
+    private var titleEdgeInsets = Property<UIEdgeInsets>()
+    private var contentEdgeInsets = Property<UIEdgeInsets>()
+    private var imageEdgeInsets = Property<UIEdgeInsets>()
+    private var reversesTitleShadowWhenHighlighted = Property<Bool>()
+    private var adjustsImageWhenHighlighted = Property<Bool>()
+    private var adjustsImageWhenDisabled = Property<Bool>()
+    private var showsTouchWhenHighlighted = Property<Bool>()
     
     public init() {}
     
@@ -250,7 +250,7 @@ open class ButtonStyleBuilder {
         return self
     }
     
-    private func setProperty<T>(param: Data<T>, value: T, state: ButtonStyleKit.ButtonState) {
+    private func setProperty<T>(param: Property<T>, value: T, state: ButtonStyleKit.ButtonState) {
         switch state {
         case .all:
             param.normal = value
@@ -270,99 +270,99 @@ open class ButtonStyleBuilder {
     
     // Appear
     public func build() {
-        if let font = attachProperty(param: font, state: state) {
+        if let font = attachProperty(font, state: state) {
             button.titleLabel?.font = font
         }
         
-        if let borderWidth = attachProperty(param: borderWidth, state: state) {
+        if let borderWidth = attachProperty(borderWidth, state: state) {
             button.layer.borderWidth = borderWidth
         }
         
-        if let borderColor = attachProperty(param: borderColor, state: state) {
+        if let borderColor = attachProperty(borderColor, state: state) {
             button.layer.borderColor = borderColor.cgColor
         }
         
-        if let cornerRadius = attachProperty(param: cornerRadius, state: state) {
+        if let cornerRadius = attachProperty(cornerRadius, state: state) {
             button.layer.cornerRadius = cornerRadius
         }
         
-        if let opacity = attachProperty(param: opacity, state: state) {
+        if let opacity = attachProperty(opacity, state: state) {
             button.layer.opacity = opacity
         }
         
-        if let backgroundColor = attachProperty(param: backgroundColor, state: state) {
+        if let backgroundColor = attachProperty(backgroundColor, state: state) {
             button.layer.backgroundColor = backgroundColor.cgColor
         }
         
-        if let tintColor = attachProperty(param: tintColor, state: state) {
+        if let tintColor = attachProperty(tintColor, state: state) {
             button.tintColor = tintColor
         }
         
-        if let shadowColor = attachProperty(param: shadowColor, state: state) {
+        if let shadowColor = attachProperty(shadowColor, state: state) {
             button.layer.shadowColor = shadowColor.cgColor
         }
         
-        if let shadowOpacity = attachProperty(param: shadowOpacity, state: state) {
+        if let shadowOpacity = attachProperty(shadowOpacity, state: state) {
             button.layer.shadowOpacity = shadowOpacity
         }
         
-        if let shadowOffset = attachProperty(param: shadowOffset, state: state) {
+        if let shadowOffset = attachProperty(shadowOffset, state: state) {
             button.layer.shadowOffset = shadowOffset
         }
         
-        if let shadowRadius = attachProperty(param: shadowRadius, state: state) {
+        if let shadowRadius = attachProperty(shadowRadius, state: state) {
             button.layer.shadowRadius = shadowRadius
         }
         
-        if let shadowPath = attachProperty(param: shadowPath, state: state) {
+        if let shadowPath = attachProperty(shadowPath, state: state) {
             button.layer.shadowPath = shadowPath
         }
         
-        if let clipsToBounds = attachProperty(param: clipsToBounds, state: state) {
+        if let clipsToBounds = attachProperty(clipsToBounds, state: state) {
             button.clipsToBounds = clipsToBounds
         }
         
-        if let masksToBounds = attachProperty(param: masksToBounds, state: state) {
+        if let masksToBounds = attachProperty(masksToBounds, state: state) {
             button.layer.masksToBounds = masksToBounds
         }
         
-        if let isExclusiveTouch = attachProperty(param: isExclusiveTouch, state: state) {
+        if let isExclusiveTouch = attachProperty(isExclusiveTouch, state: state) {
             button.isExclusiveTouch = isExclusiveTouch
         }
         
-        if let contentHorizontalAlignment = attachProperty(param: contentHorizontalAlignment, state: state) {
+        if let contentHorizontalAlignment = attachProperty(contentHorizontalAlignment, state: state) {
             button.contentHorizontalAlignment = contentHorizontalAlignment
         }
         
-        if let contentVerticalAlignment = attachProperty(param: contentVerticalAlignment, state: state) {
+        if let contentVerticalAlignment = attachProperty(contentVerticalAlignment, state: state) {
             button.contentVerticalAlignment = contentVerticalAlignment
         }
         
-        if let titleEdgeInsets = attachProperty(param: titleEdgeInsets, state: state) {
+        if let titleEdgeInsets = attachProperty(titleEdgeInsets, state: state) {
             button.titleEdgeInsets = titleEdgeInsets
         }
         
-        if let contentEdgeInsets = attachProperty(param: contentEdgeInsets, state: state) {
+        if let contentEdgeInsets = attachProperty(contentEdgeInsets, state: state) {
             button.contentEdgeInsets = contentEdgeInsets
         }
         
-        if let imageEdgeInsets = attachProperty(param: imageEdgeInsets, state: state) {
+        if let imageEdgeInsets = attachProperty(imageEdgeInsets, state: state) {
             button.imageEdgeInsets = imageEdgeInsets
         }
         
-        if let reversesTitleShadowWhenHighlighted = attachProperty(param: reversesTitleShadowWhenHighlighted, state: state) {
+        if let reversesTitleShadowWhenHighlighted = attachProperty(reversesTitleShadowWhenHighlighted, state: state) {
             button.reversesTitleShadowWhenHighlighted = reversesTitleShadowWhenHighlighted
         }
         
-        if let adjustsImageWhenHighlighted = attachProperty(param: adjustsImageWhenHighlighted, state: state) {
+        if let adjustsImageWhenHighlighted = attachProperty(adjustsImageWhenHighlighted, state: state) {
             button.adjustsImageWhenHighlighted = adjustsImageWhenHighlighted
         }
         
-        if let adjustsImageWhenDisabled = attachProperty(param: adjustsImageWhenDisabled, state: state) {
+        if let adjustsImageWhenDisabled = attachProperty(adjustsImageWhenDisabled, state: state) {
             button.adjustsImageWhenDisabled = adjustsImageWhenDisabled
         }
         
-        if let showsTouchWhenHighlighted = attachProperty(param: showsTouchWhenHighlighted, state: state) {
+        if let showsTouchWhenHighlighted = attachProperty(showsTouchWhenHighlighted, state: state) {
             button.showsTouchWhenHighlighted = showsTouchWhenHighlighted
         }
     }
@@ -373,18 +373,18 @@ open class ButtonStyleBuilder {
         build()
     }
     
-    private func attachProperty<T>(param: Data<T>, state: ButtonStyleKit.ButtonState) -> T? {
+    private func attachProperty<T>(_ prop: Property<T>, state: ButtonStyleKit.ButtonState) -> T? {
         switch state {
         case .all:
             return nil
         case .normal:
-            return param.normal
+            return prop.normal
         case .highlighted:
-            return param.highlighted
+            return prop.highlighted
         case .selected:
-            return param.selected
+            return prop.selected
         case .disabled:
-            return param.disabled
+            return prop.disabled
         }
     }
 }
@@ -408,9 +408,7 @@ extension ButtonStyleBuilder {
         // Image
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(view.frame.size, false, scale)
-        guard let context: CGContext = UIGraphicsGetCurrentContext() else {
-            return nil
-        }
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
         view.layer.render(in: context)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
